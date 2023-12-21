@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: 'Rubik Doodle Shadow';
+    background-color: black;
+    color: white;
+}
+
+div#app {
+    height: 100dvh;
+    max-height: 100dvh;
+    width: 100dvw;
+    max-width: 100dvw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1#title {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    cursor: pointer;
+}
+
+div#canvas {
+    width: 1000px;
+    height: 500px;
+    border: 8px double white;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+}
+
+div#canvas div.stats {
+    position: absolute;
+    bottom: 0px;
+    width: 32px;
+    height: 156px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
+
+span {
+    text-align: center;
+}
+
+div#canvas div.stats div.stats-btn {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 13px rgba(219, 255, 189, 0.29);
+}
+
+div#canvas div.stats div.food {
+    background-image: url('./../img/food.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+div#canvas div.stats div.water {
+    background-image: url('./../img/water.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+div#canvas div.items {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    place-content: center;
+    gap: 8px;
+}
+
+div#canvas div.items div.item {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px white;
+    transition: box-shadow 0.25s;
+}
+
+div#canvas div.items div.item:hover {
+    box-shadow: 0px 0px 10px white;
+}
+
+div.info {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 240px;
+    height: calc(100% - 16px);
+    border-radius: 4px;
+    line-height: 2em;
+}
+
+div.chat {
+    display: grid;
+    place-content: center;
+}
+
+div.chat form input {
+    width: calc(1000px + 8px);
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    background-image: url('./../img/send-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 16px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}

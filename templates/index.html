@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca-ES">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;700&family=Rubik+Doodle+Shadow&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./../static/img/icon.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="./../static/css/styles.css" type="text/css" />
+  <title>Black Stone</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1 id="title">Black Stone</h1>
+    <div id="canvas" style="background-image: url({{bg}});">
+      {% if item %}
+      <div class="map-item">
+        <img width="64px" height="64px" src="{{item}}" alt="item trobat">
+      </div>
+      {% endif %}
+      <div class="stats">
+        <span>{{hunger}}</span>
+        <div class="stats-btn food"></div>
+        <br>
+        <span>{{thirst}}</span>
+        <div class="stats-btn water"></div>
+      </div>
+      <div class="items">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="info">
+        <p>
+          {{info}}
+        </p>
+      </div>
+    </div>
+    <div class="chat">
+      <form action="/do" method="post">
+        <input name="action" type="text" placeholder="¿Què vols fer?" />
+      </form>
+    </div>
+  </div>
+  <script src="./../static/js/app.js"></script>
+</body>
+
+</html>
